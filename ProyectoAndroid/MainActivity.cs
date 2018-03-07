@@ -22,7 +22,15 @@ namespace ProyectoAndroid
             _txtUsername = FindViewById<EditText>(Resource.Id.txtUser);
             _txtPassword = FindViewById<EditText>(Resource.Id.txtPassword);
             _btnSingIn = FindViewById<Button>(Resource.Id.btnSignIn);
-            //_btnSingUp = FindViewById<Button>(Resource.Id.);
+            _btnSingUp = FindViewById<Button>(Resource.Id.btnSingUp);
+
+            _btnSingIn.Click += delegate {
+                
+            };
+
+            _btnSingUp.Click += delegate {
+                
+            };
         }
     }
 }

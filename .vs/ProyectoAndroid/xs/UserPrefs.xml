@@ -1,8 +1,9 @@
 ﻿<Properties StartupConfiguration="{BE0A64DF-3B30-4190-AADF-F8F76807CDF8}|Default">
   <MonoDevelop.Ide.ItemProperties.ProyectoAndroid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.SCCQB69DQOZLQW6P" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="ProyectoAndroid/CreateProductActivity.cs">
     <Files>
-      <File FileName="ProyectoAndroid/MainActivity.cs" Line="23" Column="66" />
+      <File FileName="ProyectoAndroid/MainActivity.cs" Line="32" Column="17" />
+      <File FileName="ProyectoAndroid/CreateProductActivity.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

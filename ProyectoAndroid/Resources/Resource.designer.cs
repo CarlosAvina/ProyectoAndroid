@@ -45,10 +45,13 @@ namespace ProyectoAndroid
 		{
 			
 			// aapt resource value: 0x7f040002
-			public const int btnSignIn = 2130968578;
+			public const int btnAddUser = 2130968578;
 			
 			// aapt resource value: 0x7f040003
-			public const int btnSingUp = 2130968579;
+			public const int btnSignIn = 2130968579;
+			
+			// aapt resource value: 0x7f040004
+			public const int btnSingUp = 2130968580;
 			
 			// aapt resource value: 0x7f040001
 			public const int txtPassword = 2130968577;
@@ -70,7 +73,13 @@ namespace ProyectoAndroid
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int Main = 2130837504;
+			public const int AddUser = 2130837504;
+			
+			// aapt resource value: 0x7f020001
+			public const int CreateProduct = 2130837505;
+			
+			// aapt resource value: 0x7f020002
+			public const int Main = 2130837506;
 			
 			static Layout()
 			{

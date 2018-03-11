@@ -1,9 +1,10 @@
 ﻿<Properties StartupConfiguration="{BE0A64DF-3B30-4190-AADF-F8F76807CDF8}|Default">
-  <MonoDevelop.Ide.ItemProperties.ProyectoAndroid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.SCCQB69DQOZLQW6P" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ProyectoAndroid/CreateProductActivity.cs">
+  <MonoDevelop.Ide.ItemProperties.ProyectoAndroid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.SCCQB69DQOZLQW6P" AndroidDesignerPreferredTheme="Theme.Material.Light.DarkActionBar" />
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="ProyectoAndroid/MainActivity.cs" Line="32" Column="17" />
-      <File FileName="ProyectoAndroid/CreateProductActivity.cs" Line="1" Column="1" />
+      <File FileName="ProyectoAndroid/CreateProductActivity.cs" Line="72" Column="81" />
+      <File FileName="ProyectoAndroid/DAL/DataAccessObjects/ProductoDAO.cs" Line="47" Column="10" />
+      <File FileName="ProyectoAndroid/Properties/AndroidManifest.xml" Line="5" Column="82" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

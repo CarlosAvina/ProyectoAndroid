@@ -1,6 +1,8 @@
 ﻿using Android.App;
 using Android.Widget;
 using Android.OS;
+using Android.Content;
+using ProyectoAndroid.DAL;
 
 namespace ProyectoAndroid
 {
@@ -12,12 +14,14 @@ namespace ProyectoAndroid
         Button _btnSingIn;
         Button _btnSingUp;
 
-        protected override void OnCreate(Bundle savedInstanceState)
+        protected override async void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
+
+            await BaseDatos.CrearBaseDatos();
 
             _txtUsername = FindViewById<EditText>(Resource.Id.txtUser);
             _txtPassword = FindViewById<EditText>(Resource.Id.txtPassword);
@@ -25,7 +29,8 @@ namespace ProyectoAndroid
             _btnSingUp = FindViewById<Button>(Resource.Id.btnSingUp);
 
             _btnSingIn.Click += delegate {
-                
+                Intent intent = new Intent(this, typeof(CreateProductActivity));
+                StartActivity(intent);
             };
 
             _btnSingUp.Click += delegate {

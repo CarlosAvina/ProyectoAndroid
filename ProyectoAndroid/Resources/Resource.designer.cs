@@ -28,6 +28,22 @@ namespace ProyectoAndroid
 		{
 		}
 		
+		public partial class Array
+		{
+			
+			// aapt resource value: 0x7f040000
+			public const int producto_categorias = 2130968576;
+			
+			static Array()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Array()
+			{
+			}
+		}
+		
 		public partial class Attribute
 		{
 			
@@ -44,20 +60,41 @@ namespace ProyectoAndroid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f040002
-			public const int btnAddUser = 2130968578;
+			// aapt resource value: 0x7f050002
+			public const int btnAddUser = 2131034114;
 			
-			// aapt resource value: 0x7f040003
-			public const int btnSignIn = 2130968579;
+			// aapt resource value: 0x7f050009
+			public const int btnAgregarProducto = 2131034121;
 			
-			// aapt resource value: 0x7f040004
-			public const int btnSingUp = 2130968580;
+			// aapt resource value: 0x7f05000a
+			public const int btnSignIn = 2131034122;
 			
-			// aapt resource value: 0x7f040001
-			public const int txtPassword = 2130968577;
+			// aapt resource value: 0x7f05000b
+			public const int btnSingUp = 2131034123;
 			
-			// aapt resource value: 0x7f040000
-			public const int txtUser = 2130968576;
+			// aapt resource value: 0x7f050007
+			public const int rdbKilo = 2131034119;
+			
+			// aapt resource value: 0x7f050006
+			public const int rdbPieza = 2131034118;
+			
+			// aapt resource value: 0x7f050005
+			public const int rdgUnidad = 2131034117;
+			
+			// aapt resource value: 0x7f050004
+			public const int spinnerCategoria = 2131034116;
+			
+			// aapt resource value: 0x7f050008
+			public const int txtCantidad = 2131034120;
+			
+			// aapt resource value: 0x7f050003
+			public const int txtNombre = 2131034115;
+			
+			// aapt resource value: 0x7f050001
+			public const int txtPassword = 2131034113;
+			
+			// aapt resource value: 0x7f050000
+			public const int txtUser = 2131034112;
 			
 			static Id()
 			{

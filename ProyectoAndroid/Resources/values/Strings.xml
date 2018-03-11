@@ -1,4 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<string name="app_name">ProyectoAndroid</string>
+    <string-array name="producto_categorias">
+        <item>Refrescos</item>
+        <item>Papas</item>
+        <item>Pan</item>
+        <item>Lacteos</item>
+        <item>Verdura</item>
+        <item>Fruta</item>
+        <item>Encurtidos</item>
+        <item>Aseo</item>
+    </string-array>
 </resources>

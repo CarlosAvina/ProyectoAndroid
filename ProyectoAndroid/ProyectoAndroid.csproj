@@ -54,6 +54,9 @@
     <Compile Include="SQLite.cs" />
     <Compile Include="DAL\BaseDatos.cs" />
     <Compile Include="DAL\DataAccessObjects\ProductoDAO.cs" />
+    <Compile Include="Models\Usuario.cs" />
+    <Compile Include="DAL\DataAccessObjects\UsuarioDAO.cs" />
+    <Compile Include="MenuActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -66,6 +69,8 @@
     <AndroidResource Include="Resources\values\Strings.xml" />
     <AndroidResource Include="Resources\layout\AddUser.axml" />
     <AndroidResource Include="Resources\layout\CreateProduct.axml" />
+    <AndroidResource Include="Resources\layout\Menu.axml" />
+    <AndroidResource Include="Resources\layout\MovimientosProductos.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\mipmap-hdpi\" />

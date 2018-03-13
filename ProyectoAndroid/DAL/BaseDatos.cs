@@ -20,7 +20,7 @@ namespace ProyectoAndroid.DAL
             {
                 File.Create(RutaBaseDatos);
                 var conexion = new SQLiteAsyncConnection(RutaBaseDatos);
-                await conexion.CreateTableAsync<Producto>();
+                await conexion.CreateTablesAsync<Producto, Usuario>();
             }
 
             return false;

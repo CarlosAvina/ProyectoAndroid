@@ -25,6 +25,15 @@
         android:layout_marginRight="20dp"
         android:layout_marginBottom="30dp"
         android:padding="20dp" />
+    <EditText
+        android:id="@+id/txtComprobarPassword"
+        android:hint="Comprobar Password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="30dp"
+        android:padding="20dp" />
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -36,6 +45,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp" />
+            android:layout_marginRight="20dp"
+            android:backgroundTint="#ff3a77ff"
+            android:textColor="#ffffffff" />
     </LinearLayout>
 </LinearLayout>

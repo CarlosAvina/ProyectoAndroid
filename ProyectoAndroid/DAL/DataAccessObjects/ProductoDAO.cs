@@ -36,14 +36,14 @@ namespace ProyectoAndroid.DAL.DataAccessObjects
             
         }
 
-        public static async Task<int> GetAll() {
+        public static async Task<List<Producto>> GetAll() {
             var conexion = new SQLiteAsyncConnection(BaseDatos.RutaBaseDatos);
 
             var tablaProductos = await conexion
                 .Table<Producto>()
                 .ToListAsync();
 
-            return tablaProductos.Count;
+            return tablaProductos;
         }
     }
 }

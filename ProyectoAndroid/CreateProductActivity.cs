@@ -25,7 +25,7 @@ namespace ProyectoAndroid
         EditText _txtCantidad;
         Button _btnAgregar;
 
-        int numero;
+        List<Producto> listProductos;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -66,10 +66,6 @@ namespace ProyectoAndroid
                         this,
                         $"No has completado todos los campos correctamente. {ex.Message}",
                         ToastLength.Short).Show();
-
-                    consultaTodo();
-
-                    Log.Debug("LISTA DE PRODUTOS INSERTADOS", numero.ToString());
                 }
 
             };
@@ -121,7 +117,7 @@ namespace ProyectoAndroid
         }
 
         public async void consultaTodo(){
-            numero = await ProductoDAO.GetAll();
+            listProductos = await ProductoDAO.GetAll();
         }
 
     }

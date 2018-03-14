@@ -42,14 +42,25 @@ namespace ProyectoAndroid
                 try{
                     usuario.Nickname = _txtUsuario.Text;
 
-                    if(ValidarUsuario(_txtPassword.Text, _txtComprobarPassword.Text)){
+                    if(ValidarUsuario(_txtPassword.Text, _txtComprobarPassword.Text) &&
+                       _txtUsuario.Text != "" &&
+                       _txtPassword.Text != "" &&
+                       _txtComprobarPassword.Text != ""){
+                        
                         usuario.Password = _txtPassword.Text;
+
+                        GuardaUsuario(usuario);
+
+                        Intent intent = new Intent(this, typeof(MainActivity));
+                        StartActivity(intent);
                     }
-
-                    GuardaUsuario(usuario);
-
-                }
-                catch(Exception ex){
+                    else {
+                        Toast.MakeText(
+                            this,
+                            $"Completa los todos los campos",
+                            ToastLength.Short).Show();
+                    }
+                }catch(Exception ex){
                     Toast.MakeText(
                         this,
                         $"Ha ocurrido un error... {ex.Message}",

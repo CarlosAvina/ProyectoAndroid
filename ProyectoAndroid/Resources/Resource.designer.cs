@@ -60,23 +60,29 @@ namespace ProyectoAndroid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050014
-			public const int BtnCancelar = 2131034132;
-			
-			// aapt resource value: 0x7f050015
-			public const int BtnGuardar = 2131034133;
+			// aapt resource value: 0x7f050018
+			public const int BtnGuardar = 2131034136;
 			
 			// aapt resource value: 0x7f05000f
 			public const int LblAccion = 2131034127;
 			
-			// aapt resource value: 0x7f050011
-			public const int SpinnerCategoria = 2131034129;
+			// aapt resource value: 0x7f050014
+			public const int RbnEntrada = 2131034132;
 			
-			// aapt resource value: 0x7f050012
-			public const int TxtCantidadInicial = 2131034130;
+			// aapt resource value: 0x7f050015
+			public const int RbnSalida = 2131034133;
+			
+			// aapt resource value: 0x7f050013
+			public const int RgrMovimiento = 2131034131;
+			
+			// aapt resource value: 0x7f050011
+			public const int TxtCantidadInicial = 2131034129;
+			
+			// aapt resource value: 0x7f050016
+			public const int TxtCantidadModif = 2131034134;
 			
 			// aapt resource value: 0x7f050010
-			public const int TxtNombre = 2131034128;
+			public const int TxtNombreProducto = 2131034128;
 			
 			// aapt resource value: 0x7f050003
 			public const int btnAddUser = 2131034115;
@@ -93,8 +99,8 @@ namespace ProyectoAndroid
 			// aapt resource value: 0x7f05000c
 			public const int btnSingUp = 2131034124;
 			
-			// aapt resource value: 0x7f050013
-			public const int linearLayout1 = 2131034131;
+			// aapt resource value: 0x7f050017
+			public const int linearLayout1 = 2131034135;
 			
 			// aapt resource value: 0x7f05000e
 			public const int lvwProductos = 2131034126;
@@ -125,6 +131,9 @@ namespace ProyectoAndroid
 			
 			// aapt resource value: 0x7f050000
 			public const int txtUser = 2131034112;
+			
+			// aapt resource value: 0x7f050012
+			public const int txtViewMovimiento = 2131034130;
 			
 			static Id()
 			{

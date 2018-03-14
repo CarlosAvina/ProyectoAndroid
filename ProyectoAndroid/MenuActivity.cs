@@ -24,14 +24,17 @@ namespace ProyectoAndroid
         Button _btnAgregar;
         ListView _lvwProductos;
 
-        protected override void OnCreate(Bundle savedInstanceState)
+		public override void OnBackPressed()
+		{
+            Intent intent = new Intent(this, typeof(MainActivity));
+            StartActivity(intent);
+		}
+
+		protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.Menu);
-
-            //Cuando carga "MainActivity" se manda crear la base de datos si
-            //esta no existe
 
             _btnAgregar = FindViewById<Button>(Resource.Id.btnAgregar);
             _lvwProductos = FindViewById<ListView>(Resource.Id.lvwProductos);
@@ -41,7 +44,7 @@ namespace ProyectoAndroid
             _btnAgregar.Click += delegate
             {
                 var intent = new Intent(this, typeof(CreateProductActivity));
-                //intent.PutExtra("accion", "crear");
+                intent.PutExtra("accion", "crear");
                 StartActivity(intent);
             };
         }
@@ -63,9 +66,9 @@ namespace ProyectoAndroid
             {
                 var posicion = e.Position;
                 var productoSeleccionado = _productos[posicion];
-                var intent = new Intent(this, typeof(CreateProductActivity));
+                var intent = new Intent(this, typeof(MovimientosProductosActivity));
 
-                //intent.PutExtra("accion", "editar");
+                intent.PutExtra("accion", "editar");
                 intent.PutExtra("idProducto", productoSeleccionado.Id);
                 StartActivity(intent);
             };

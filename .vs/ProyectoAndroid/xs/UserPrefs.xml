@@ -1,19 +1,17 @@
 ﻿<Properties StartupConfiguration="{BE0A64DF-3B30-4190-AADF-F8F76807CDF8}|Default">
   <MonoDevelop.Ide.ItemProperties.ProyectoAndroid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Android_Accelerated_Nougat" AndroidDesignerPreferredTheme="Theme.DeviceDefault" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ProyectoAndroid/MenuActivity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ProyectoAndroid/DAL/BaseDatos.cs">
     <Files>
-      <File FileName="ProyectoAndroid/AddUserActivity.cs" Line="70" Column="1" />
-      <File FileName="ProyectoAndroid/MainActivity.cs" Line="46" Column="76" />
-      <File FileName="ProyectoAndroid/MenuActivity.cs" Line="54" Column="82" />
-      <File FileName="ProyectoAndroid/CreateProductActivity.cs" Line="68" Column="51" />
+      <File FileName="ProyectoAndroid/MovimientosProductosActivity.cs" Line="124" Column="51" />
+      <File FileName="ProyectoAndroid/AddUserActivity.cs" Line="57" Column="1" />
+      <File FileName="ProyectoAndroid/DAL/BaseDatos.cs" Line="13" Column="66" />
+      <File FileName="ProyectoAndroid/DAL/DataAccessObjects/UsuarioDAO.cs" Line="1" Column="1" />
+      <File FileName="ProyectoAndroid/DAL/DataAccessObjects/ProductoDAO.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/juancarlosavinaluna/Projects/ProyectoAndroid/ProyectoAndroid/AddUserActivity.cs" relfile="ProyectoAndroid/AddUserActivity.cs" line="40" column="1" />
-      <Breakpoint file="/Users/juancarlosavinaluna/Projects/ProyectoAndroid/ProyectoAndroid/AddUserActivity.cs" relfile="ProyectoAndroid/AddUserActivity.cs" line="70" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />

@@ -2,30 +2,29 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="20dp">
     <LinearLayout
         android:focusable="true"
         android:focusableInTouchMode="true"
         android:layout_width="0dp"
         android:layout_height="0dp" />
     <TextView
-        android:text="Accion"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/LblAccion"
-        android:layout_marginBottom="40dp" />
+        android:layout_marginBottom="40dp"
+        android:hint="Editar"
+        android:gravity="center" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/TxtNombre"
+        android:id="@+id/TxtNombreProducto"
         android:hint="Nombre del Producto"
-        android:layout_marginBottom="40dp" />
-    <Spinner
-        android:layout_width="match_parent"
-        android:layout_height="40.0dp"
-        android:id="@+id/SpinnerCategoria"
-        android:layout_marginBottom="30dp" />
+        android:nextFocusUp="@id/TxtNombreProducto"
+        android:nextFocusLeft="@id/TxtNombreProducto"
+        android:layout_marginBottom="0dp" />
     <EditText
         android:inputType="number"
         android:layout_width="match_parent"
@@ -33,26 +32,54 @@
         android:id="@+id/TxtCantidadInicial"
         android:layout_marginBottom="20dp"
         android:hint="Cantidad" />
+    <TextView
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtViewMovimiento"
+        android:layout_marginBottom="40dp"
+        android:text="Tipo de Movimiento : " />
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/RgrMovimiento"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginBottom="40dp">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/RbnEntrada"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:text="Entrada" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/RbnSalida"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:text="Salida" />
+    </RadioGroup>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/TxtCantidadModif"
+        android:hint="Cantidad a Modificar"
+        android:inputType="number" />
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout1"
         android:gravity="bottom"
-        android:layout_marginTop="100dp"
-        android:minWidth="25px"
-        android:minHeight="25px">
-        <Button
-            android:text="Cancelar"
-            android:id="@+id/BtnCancelar"
-            android:textColor="@android:color/background_light"
-            android:backgroundTint="#ffff3232"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+        android:layout_marginTop="90dp"
+        android:minWidth="10px"
+        android:minHeight="10px">
         <Button
             android:text="Guardar"
             android:id="@+id/BtnGuardar"
-            android:backgroundTint="#ff304ffe"
+            android:backgroundTint="#ff3a77ff"
             android:textColor="#ffffffff"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />

@@ -57,6 +57,7 @@
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="DAL\DataAccessObjects\UsuarioDAO.cs" />
     <Compile Include="MenuActivity.cs" />
+    <Compile Include="MovimientosProductosActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

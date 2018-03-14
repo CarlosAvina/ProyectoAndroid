@@ -15,7 +15,8 @@
         android:layout_marginTop="100dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:padding="20dp" />
+        android:padding="20dp"
+        android:inputType="textPersonName" />
     <EditText
         android:id="@+id/txtPassword"
         android:hint="Password"
@@ -25,6 +26,8 @@
         android:layout_marginRight="20dp"
         android:layout_marginBottom="30dp"
         android:padding="20dp"
+        android:nextFocusUp="@id/txtPassword"
+        android:nextFocusLeft="@id/txtPassword"
         android:inputType="textPassword" />
     <LinearLayout
         android:orientation="horizontal"

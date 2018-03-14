@@ -27,7 +27,15 @@ namespace ProyectoAndroid
 
         List<Producto> listProductos;
 
-        protected override void OnCreate(Bundle savedInstanceState)
+		public override void OnBackPressed()
+		{
+            base.OnBackPressed();
+
+            Intent intent = new Intent(this, typeof(MenuActivity));
+            StartActivity(intent);
+		}
+
+		protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 

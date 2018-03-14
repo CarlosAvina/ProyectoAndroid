@@ -30,17 +30,20 @@ namespace ProyectoAndroid
 
             await BaseDatos.CrearBaseDatos();
 
+            GetUsuario();
+
             _txtUsername = FindViewById<EditText>(Resource.Id.txtUser);
             _txtPassword = FindViewById<EditText>(Resource.Id.txtPassword);
             _btnSingIn = FindViewById<Button>(Resource.Id.btnSignIn);
             _btnSingUp = FindViewById<Button>(Resource.Id.btnSingUp);
 
+            _txtUsername.Text = "";
+            _txtPassword.Text = "";
+
             _btnSingIn.Click += delegate {
                 Usuario usuario = new Usuario();
                 usuario.Nickname = _txtUsername.Text;
                 usuario.Password = _txtPassword.Text;
-
-                GetUsuario(usuario);
 
                 if(ValidarLogin(usuario)) {
                     Intent intent = new Intent(this, typeof(MenuActivity));
@@ -69,7 +72,7 @@ namespace ProyectoAndroid
             return false;
         }
 
-        public async void GetUsuario(Usuario usuario)
+        public async void GetUsuario()
         {
             try
             {

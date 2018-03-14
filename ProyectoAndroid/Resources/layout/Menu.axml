@@ -7,12 +7,19 @@
         android:id="@+id/btnAgregar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Agregar nueva persona"
-        android:backgroundTint="#ff304ffe" />
+        android:text="Agregar nuevo producto"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="#ff3a77ff"
+        android:textColor="#ffffffff" />
     <ListView
         android:minWidth="25px"
         android:minHeight="25px"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:id="@+id/lvwProductos" />
 </LinearLayout>

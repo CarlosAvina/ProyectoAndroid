@@ -45,5 +45,31 @@ namespace ProyectoAndroid.DAL.DataAccessObjects
 
             return tablaProductos;
         }
+
+        public static async Task<Producto> GetById(int id)
+        {
+            var conexion = new SQLiteAsyncConnection(BaseDatos.RutaBaseDatos);
+
+            var tablaProductos = await conexion
+                .Table<Producto>()
+                .ToListAsync();
+
+            return tablaProductos.FirstOrDefault(p => p.Id == id);
+        }
+
+        public static async Task<Producto> Update(Producto producto)
+        {
+            var conexion = new SQLiteAsyncConnection(BaseDatos.RutaBaseDatos);
+
+            var existe = await GetById(producto.Id);
+
+            if (existe != null)
+            {
+                await conexion.UpdateAsync(producto);
+                return producto;
+            }
+
+            throw new Exception("Error en el sistema");
+        }
     }
 }

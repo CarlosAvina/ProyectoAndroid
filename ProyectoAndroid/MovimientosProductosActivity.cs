@@ -29,7 +29,6 @@ namespace ProyectoAndroid
         RadioButton _rbnEntrada;
         RadioButton _rbnSalida;
         Button _btnGuardar;
-        //Button _btnCancelar;
        
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -61,10 +60,6 @@ namespace ProyectoAndroid
                   
                 }
             };
-            //_btnCancelar.Click += delegate
-            //{
-                //RegresarMain();
-            //};
         }
 
         void ReferenciarComponentes()
@@ -76,7 +71,6 @@ namespace ProyectoAndroid
             _rbnSalida = FindViewById<RadioButton>(Resource.Id.RbnSalida);
             _btnGuardar = FindViewById<Button>(Resource.Id.BtnGuardar);
             _txtCantidadModif = FindViewById<EditText>(Resource.Id.TxtCantidadModif);
-            //_btnCancelar = FindViewById<Button>(Resource.Id.BtnCancelar);
 
             _txtNombreProducto.Enabled = false;
             _txtCantidadInicial.Enabled = false;
@@ -95,17 +89,18 @@ namespace ProyectoAndroid
                 if (ObtenerProductoCapturado())
                 {
                     await ProductoDAO.Update(_productoActual);
+
                     Toast.MakeText(
-                   this,
-                   $"Producto actualizado correctamente",
-                    ToastLength.Short).Show();
+                        this,
+                        $"Producto actualizado correctamente",
+                        ToastLength.Short).Show();
                     RegresarMain();
                 }
                 else{
                     Toast.MakeText(
-                   this,
-                   $"Esto no se puede realizar",
-                    ToastLength.Short).Show();
+                        this,
+                        $"Esto no se puede realizar",
+                        ToastLength.Short).Show();
                 }
             }
             catch (Exception ex)
@@ -121,31 +116,35 @@ namespace ProyectoAndroid
         {
             try
             {
-                if((_rbnSalida.Checked == false && _rbnEntrada.Checked == false) || _txtCantidadModif == null) {
+                if ((_rbnSalida.Checked == false && _rbnEntrada.Checked == false) || _txtCantidadModif == null){
                     Toast.MakeText(
                         this,
                         $"Por favor selecciona una opción",
                         ToastLength.Long).Show();
+
                     return false;
                 }
-
-                if (_rbnEntrada.Checked)
-                {
+                else if (_rbnEntrada.Checked){
                     _productoActual.Cantidad = _productoActual.Cantidad + int.Parse(_txtCantidadModif.Text);
-                    return true;
 
+                    return true;
                 }
-                else if (_rbnSalida.Checked)
-                {
-                    _productoActual.Cantidad = _productoActual.Cantidad - int.Parse(_txtCantidadModif.Text);
+                else if (_rbnSalida.Checked){
+                    
+                    if (_productoActual.Cantidad - int.Parse(_txtCantidadModif.Text) >= 0){
+
+                        _productoActual.Cantidad = _productoActual.Cantidad - int.Parse(_txtCantidadModif.Text);
+
+                        return true;
+                    }
+                    else {
+                        Toast.MakeText(this,
+                            $"No se puede realizar esa operacion",
+                            ToastLength.Long).Show();
+                        return false;
+                    }
                 }
-                if (_productoActual.Cantidad < 0)
-                {
-                    Toast.MakeText(this,
-                    $"No se puede realizar esa operacion",
-                    ToastLength.Long).Show();
-                    return false;
-                }
+
             }
             catch (Exception ex)
             {
@@ -154,7 +153,8 @@ namespace ProyectoAndroid
                     $"Ha ocurrido un error en la aplicación. {ex.Message}",
                     ToastLength.Long).Show();
             }
-            return true;
+
+            return false;
         }
 
         async void GuardarProducto()
@@ -164,20 +164,19 @@ namespace ProyectoAndroid
                 if (ObtenerProductoCapturado())
                 {
                     await ProductoDAO.Create(_productoActual);
+
                     Toast.MakeText(
-                    this,
-                    "Persona creada correctamente!",
-                    ToastLength.Short).Show();
-                   
+                        this,
+                        "Persona creada correctamente!",
+                        ToastLength.Short).Show();
                 }
                 else
                 {
                     Toast.MakeText(
-                    this,
-                    "No se puede ejecutar esa operacion",
-                    ToastLength.Short).Show();
+                        this,
+                        "No se puede ejecutar esa operacion",
+                        ToastLength.Short).Show();
                 }
-
             }
             catch (Exception ex)
             {
@@ -194,8 +193,5 @@ namespace ProyectoAndroid
             _txtNombreProducto.Text = _productoActual.Nombre;
             _txtCantidadInicial.Text = _productoActual.Cantidad.ToString();
         }
-
-
-
     }
 }
